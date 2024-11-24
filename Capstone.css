@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+}
+
+body {
+    background-color: #7cb159;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#DivScores {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 1200px;
+    height: 123px;
+    border-radius: 15px;
+    border: 2px solid white;
+    padding-top: 20px;
+    margin-top: -380px;
+}
+
+#LabelRockPaper {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    width: 30%;
+    line-height: 42px;
+    font-family: sans-serif;
+    padding: 6px;
+    padding-left: 15px;
+    letter-spacing: 4px;
+    border-radius: 10px;
+    margin-top: -20px;
+}
+
+#DivComputerScore,
+#DivYourScore {
+    width: 150px;
+    background-color: white;
+    color: grey;
+    border-radius: 10px;
+    padding-top: -20px;
+    font-size: 15px;
+    line-height: 25px;
+    height: 120px;
+    font-family: Roboto, sans-serif;
+    margin: 25px;
+    margin-top: -0px;
+    letter-spacing: 3px;
+    margin-top: -6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#colorfor0 {
+    color: black;
+    margin-top: 10px;
+}
+
+#DivComputerScore {
+    margin-left: -80px;
+    margin-bottom: 15px;
+}
+
+#DivYourScore {
+    margin-left: -250px;
+    margin-bottom: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    right: -10px;
+    top: 150px;
+    width: 100%;
+}
+
+.modal-content {
+    background-color: #0c4606;
+    margin: 15% auto;
+    padding: 20px;
+    border: 6px solid white;
+    width: 15%;
+    height: 220px;
+    left: 20px;
+    border-radius: 10px;
+    border: 4px solid white;
+    position: absolute;
+    right: -920px;
+    top: -90px;
+}
+
+.close {
+    font-size: 42px;
+    font-weight: bold;
+    position: absolute;
+    right: -25px;
+    top: -30px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 4px solid white;
+}
+
+.close:hover {
+    background-color: darkred;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: white;
+}
+
+ul li {
+    font-size: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+ul li::marker {
+    color: rgb(255, 255, 15);
+
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#playerChoiceText {
+    position: absolute;
+    left: 80px;
+    bottom: 255px;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#computerChoiceText {
+    position: absolute;
+    left: 570px;
+    bottom: 255px;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#playAgainButton,
+#TieRplayButton,
+#playAgainButton2 {
+    margin-bottom: -140px;
+    margin-left: -20px;
+    border-radius: 6px;
+    color: black;
+    letter-spacing: 2px;
+    background: linear-gradient(20deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    border: none;
+    position: absolute;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 12px;
+    font-family: verdana;
+}
+
+#playAgainButton2 {
+    margin-left: -60px;
+}
+
+#rulesButton {
+    border: 2px solid white;
+    width: 130px;
+    letter-spacing: 3px;
+    background-color: #7cb159;
+    height: 40px;
+    color: white;
+    border-radius: 7px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+#NextButtonPage {
+    border: 2px solid white;
+    width: 130px;
+    height: 40px;
+    color: white;
+    background-color: #7cb159;
+    font-weight: bold;
+    border-radius: 7px;
+    position: fixed;
+    bottom: 20px;
+    right: 160px;
+    z-index: 9;
+    letter-spacing: 3px;
+}
+
+#rulesButton.move-left {
+    right: 180px;
+}
+
+#rulesButton.fixed-right {
+    right: 20px;
+}
+
+#NextButtonPage.fixed-right {
+    right: 170px;
+}
+
+
+#Divcongratulations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    width: 800px;
+    height: 600px;
+    padding: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+#congratulationImagesWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: 300px;
+    line-height: 400px;
+    position: relative;
+    margin-top: 150px;
+}
+
+#congratulationImagesWrapper img {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+#congratulationImagesWrapper .fireworks {
+    position: relative;
+    z-index: 1;
+}
+
+#congratulationImagesWrapper .cup {
+    position: absolute;
+    top: 30px;
+    z-index: 2;
+}
+
+#congratulationText {
+    margin-top: -20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+#congratulationText h3 {
+    color: white;
+}
+
+#congratulationText p {
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+#resultContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -200px;
+    position: absolute;
+    bottom: 100px;
+    width: 60%;
+    height: 300px;
+}
+
+.result-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 270px;
+}
+
+.result-img {
+    padding: 55px;
+    margin: 50px;
+    border: 12px solid;
+    background: linear-gradient(20deg, rgb(128, 128, 128), hwb(0 100% 0%));
+    border-radius: 50%;
+    cursor: pointer;
+    height: 40px;
+}
+
+#resultText {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+#divImages {
+    position: absolute;
+    top: 185px;
+    left: 430px;
+    height: 400px;
+    width: 400px;
+    bottom: -100px;
+    line-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#divImages .image-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    gap: 10px;
+    margin-top: -40px;
+    margin-bottom: 45px;
+    padding: 20px;
+
+}
+
+#divImages img {
+    height: 30px;
+    padding: 20px;
+    border: 12px solid rgba(21, 97, 202, 0.9);
+    background: linear-gradient(20deg, hsl(0, 0%, 50%), rgb(255, 255, 255));
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#divImages .image-container-vertical .centered-img {
+    margin-bottom: 200px;
+    background: linear-gradient(20deg, hsl(0, 0%, 50%), rgb(255, 255, 255));
+    border-radius: 50%;
+    border: 12px solid orange;
+}
+
+#divImages .BordercolorForvictoryimg {
+    border: 12px solid rgb(141, 62, 141);
+}
+
+#divImages .image-container::before {
+    content: '';
+    position: absolute;
+    top: 116px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background: linear-gradient(40deg, black, grey);
+    z-index: -1;
+    height: 15px;
+}
+
+#divImages .image-container .connect-line {
+    position: absolute;
+    bottom: 100px;
+    left: 85%;
+    width: 15px;
+    height: 200px;
+    background: linear-gradient(50deg, black, grey);
+    transform-origin: top left;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+
+.image-container-vertical {
+    height: 100px;
+}
+
+#divImages .image-container-vertical .connect-line-vertical {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    width: 15px;
+    height: 200px;
+    background: linear-gradient(50deg, black, grey);
+    transform-origin: top left;
+    transform: rotate(320deg);
+    z-index: -1;
+}
+
+.against {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 3px;
+}
+
+.spacingforResultText {
+    letter-spacing: 3px;
+}

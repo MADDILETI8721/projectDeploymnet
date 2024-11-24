@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+    <link rel="stylesheet" href="Capstone.css">
+</head>
+
+<body>
+    <div id="DivScores">
+        <div id="LabelRockPaper">ROCK <br> PAPER <br> SCISSORS</div>
+        <div id="DivComputerScore"> COMPUTER SCORE <h1 id="colorfor0">0</h1>
+        </div>
+        <div id="DivYourScore"> YOUR <br> SCORE <h1 id="colorfor0">0</h1>
+        </div>
+    </div>
+
+    <div id="divImages">
+        <div class="image-container">
+            <img src="Images/handFist.png" alt="rock" class="choice-img">
+            <img src="Images/victory.png" alt="paper" class="choice-img BordercolorForvictoryimg">
+            <div class="connect-line"></div>
+        </div>
+        <div class="image-container-vertical">
+            <img src="Images/privacy.png" alt="scissors" class="choice-img centered-img">
+            <div class="connect-line-vertical"></div>
+        </div>
+    </div>
+
+
+    <div id="resultContainer" style="display:none; text-align:center;">
+        <div id="resultMessage" style="font-size: 24px;"></div>
+        <div id="resultImages" class="result-images">
+            <div id="playerChoiceText"></div>
+            <img src="" alt="Player Choice" id="playerResultImage" class="result-img">
+            <span id="resultText"></span>
+            <div id="computerChoiceText"></div>
+            <img src="" alt="Computer Choice" id="computerResultImage" class="result-img">
+            <button id="playAgainButton" onclick="resetGame()">PLAY AGAIN</button>
+            <button id="TieRplayButton" onclick="TieReplayButton()">REPLAY</button>
+        </div>
+    </div>
+
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Game Rules</h3>
+            <ul>
+                <li>Rock beats Scissors, Scissors beats Paper, and Paper beats Rock</li>
+                <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper,
+                    scissors."</li>
+                <li>Use Rock Paper Scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="Divcongratulations" style="display: none;">
+        <div id="congratulationImagesWrapper">
+            <img src="Images/fireworks.png" alt="fireworksimg" class="fireworks">
+            <img src="Images/trophy.png" alt="trophyimg" class="cup">
+        </div>
+
+        <div id="congratulationText">
+            <h3>HURRAY!!</h3>
+            <p>YOU WON THE GAME!</p>
+            <button id="playAgainButton2" onclick="resetGame()">PLAY AGAIN</button>
+        </div>
+    </div>
+    <div>
+        <button id="rulesButton" onclick="return GamesRules()">RULES</button>
+        <button id="NextButtonPage" onclick="nextButtonPage()" style="display:none;">NEXT</button>
+    </div>
+    <script src="Capstone.js"></script>
+</body>
+
+</html>
